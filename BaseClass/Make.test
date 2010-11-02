@@ -1,0 +1,5 @@
+
+VAR1 = a.o b.o #hello
+
+$(VAR1):
+	echo $@

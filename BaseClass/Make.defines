@@ -1,0 +1,7 @@
+CXX=g++
+PUBDEFINES = -g -pipe -o2 -DLINUX -I./:/u1/te/src/include
+PUBLIBS = -lpthread
+AR = ar rc
+
+CLEANFILES = core core.* *.o temp.* *.out
+
