@@ -1,0 +1,25 @@
+#mafie about test tools for mmdb which is a memorize database.
+#created by sfzhao
+ 
+TESRCPATH = /u1/te/src 
+CXX = g++
+DEFINES = -g -pipe -o2 -DLINUX -DMOM_NODBG -DDFS_Q -DTE_DEBUG -I./ -I$(TESRCPATH)/include -I$(TESRCPATH)/dbapi_include/ -I$(TESRCPATH)/BaseClass/   \
+		  -I$(TESRCPATH)/DataStruct/ -I$(TESRCPATH)/TAPSPublic/ -I$(TESRCPATH)/TAPSTable/
+LIBS = -lpthread -L$(TESRCPATH)/lib -lTAPSBaseClass -lTAPSTable -lmmdb_client -lswpf_mom_client -lsq2
+
+BIN = test
+OBJECT = testtools.o test.o
+all:veryclean $(BIN)
+
+$(BIN):$(OBJECT)
+	$(CXX) $(CXXFLAGS) -o $@ $(DEFINES) $(LIBS)
+
+clean:
+	rm -f *.o
+
+veryclean:clean
+	rm -f $(BIN)
+ 
+
+ 
+
