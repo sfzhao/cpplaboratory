@@ -9,3 +9,5 @@ EVENT:Event.o
 	#$(CXX) $(PUBDEFINES) -c $@ $(PUBLIBS) Event.o;
 	$(AR) libMyBaseClass.a Event.o
 
+FTP:ftptranser.o
+	$(AR) libftptranser.a ftptranser.o
